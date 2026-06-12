@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnovVentas — Tecnología Inteligente</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#inicio" class="header__logo">
+        <span class="logo__icon"><i class="fa-solid fa-bolt"></i></span>
+        <span class="logo__text">Innov<strong>Ventas</strong></span>
+      </a>
+
+      <!-- Nav -->
+      <nav class="header__nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#inicio"     class="nav__link active">Inicio</a></li>
+          <li><a href="#productos"  class="nav__link">Productos</a></li>
+          <li><a href="#categorias" class="nav__link">Categorías</a></li>
+          <li><a href="#ofertas"    class="nav__link">Ofertas</a></li>
+          <li><a href="#contacto"   class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header__actions">
+        <button class="btn-ai" id="btnOpenChatHeader">
+          <i class="fa-solid fa-robot"></i>
+          <span>Asistente IA</span>
+        </button>
+        <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__eyebrow">
+          <i class="fa-solid fa-circle-dot pulse"></i> IA activa — Asistencia en tiempo real
+        </span>
+        <h1 class="hero__title">
+          Compra tecnología<br /><em>inteligente</em> con<br />asistencia IA
+        </h1>
+        <p class="hero__desc">
+          Encuentra productos tecnológicos de última generación con ayuda personalizada de nuestro asistente IA, disponible 24/7 para guiarte en cada paso de tu compra.
+        </p>
+        <div class="hero__cta">
+          <a href="#productos" class="btn btn--primary">
+            <i class="fa-solid fa-bag-shopping"></i> Ver productos
+          </a>
+          <button class="btn btn--ghost" id="btnOpenChatHero">
+            <i class="fa-solid fa-robot"></i> Hablar con IA
+          </button>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">+12K</span>
+            <span class="stat__label">Clientes felices</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">98%</span>
+            <span class="stat__label">Satisfacción</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">24/7</span>
+            <span class="stat__label">Soporte IA</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__device">
+          <div class="device__screen">
+            <div class="screen__scan"></div>
+            <i class="fa-solid fa-laptop device__icon"></i>
+            <span class="device__label">Laptop Gamer Pro</span>
+            <span class="device__price">S/ 4,599</span>
+          </div>
+          <div class="device__orbit device__orbit--1"><span></span></div>
+          <div class="device__orbit device__orbit--2"><span></span></div>
+          <div class="device__orbit device__orbit--3"><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Desplazar</span>
+      <i class="fa-solid fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BENEFICIOS
+  ═══════════════════════════════════════════ -->
+  <section class="benefits" id="categorias">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Por qué elegirnos</span>
+        <h2 class="section-title">Experiencia de compra superior</h2>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3>Atención 24/7 mediante IA</h3>
+          <p>Nuestro asistente inteligente resuelve tus dudas al instante, cualquier día y a cualquier hora.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Pagos seguros</h3>
+          <p>Transacciones cifradas con los más altos estándares de seguridad PCI-DSS. Tu dinero protegido.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3>Envíos rápidos</h3>
+          <p>Recibe tus productos en 24–48 h en Lima Metropolitana. Seguimiento en tiempo real.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>Soporte técnico</h3>
+          <p>Equipo especializado para ayudarte con la configuración, garantías y postventa de tu producto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CATÁLOGO DE PRODUCTOS
+  ═══════════════════════════════════════════ -->
+  <section class="catalog" id="productos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Catálogo</span>
+        <h2 class="section-title">Productos destacados</h2>
+      </div>
+
+      <!-- Filtro de categorías -->
+      <div class="catalog__filters" id="categoryFilters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <!-- Los botones de categoría se generan dinámicamente en app.js -->
+      </div>
+
+      <!-- Grid de productos (generado por JS) -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Skeleton loaders -->
+        <div class="product-skeleton"></div>
+        <div class="product-skeleton"></div>
+        <div class="product-skeleton"></div>
+        <div class="product-skeleton"></div>
+        <div class="product-skeleton"></div>
+        <div class="product-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       OFERTAS ESPECIALES
+  ═══════════════════════════════════════════ -->
+  <section class="offers" id="ofertas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Tiempo limitado</span>
+        <h2 class="section-title">Ofertas especiales</h2>
+      </div>
+      <div class="offers__banner">
+        <div class="offers__content">
+          <span class="offers__tag"><i class="fa-solid fa-fire"></i> OFERTA DEL MES</span>
+          <h3>Laptop Gamer Pro X</h3>
+          <p>RTX 4070 · 32 GB RAM · 1 TB NVMe SSD</p>
+          <div class="offers__price">
+            <span class="price-old">S/ 5,299</span>
+            <span class="price-new">S/ 4,599</span>
+            <span class="price-badge">-13%</span>
+          </div>
+          <!-- Cuenta regresiva -->
+          <div class="countdown" id="countdown">
+            <div class="countdown__block"><span id="cdDays">00</span><label>días</label></div>
+            <div class="countdown__block"><span id="cdHours">00</span><label>horas</label></div>
+            <div class="countdown__block"><span id="cdMins">00</span><label>min</label></div>
+            <div class="countdown__block"><span id="cdSecs">00</span><label>seg</label></div>
+          </div>
+          <button class="btn btn--primary" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+            Aprovechar oferta
+          </button>
+        </div>
+        <div class="offers__img">
+          <i class="fa-solid fa-laptop offers__laptop-icon"></i>
+          <div class="offers__glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MÉTRICAS — Impacto del Asistente IA
+  ═══════════════════════════════════════════ -->
+  <section class="metrics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Datos reales</span>
+        <h2 class="section-title">Impacto del asistente IA</h2>
+        <p class="section-desc">Cómo la inteligencia artificial mejora los resultados de nuestra tienda.</p>
+      </div>
+      <div class="metrics__grid">
+
+        <!-- Chart 1: Carritos abandonados -->
+        <div class="chart-card">
+          <h3 class="chart-card__title">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            Reducción de carritos abandonados
+          </h3>
+          <div class="chart-card__body">
+            <canvas id="chartAbandon"></canvas>
+          </div>
+          <p class="chart-card__note">Antes vs. Después de implementar IA</p>
+        </div>
+
+        <!-- Chart 2: Satisfacción -->
+        <div class="chart-card">
+          <h3 class="chart-card__title">
+            <i class="fa-solid fa-face-smile"></i>
+            Aumento de satisfacción del cliente
+          </h3>
+          <div class="chart-card__body">
+            <canvas id="chartSatisfaction"></canvas>
+          </div>
+          <p class="chart-card__note">Encuesta mensual — últimos 6 meses</p>
+        </div>
+
+        <!-- Chart 3: Tiempo de respuesta -->
+        <div class="chart-card">
+          <h3 class="chart-card__title">
+            <i class="fa-solid fa-clock"></i>
+            Tiempo promedio de respuesta
+          </h3>
+          <div class="chart-card__body">
+            <canvas id="chartResponse"></canvas>
+          </div>
+          <p class="chart-card__note">Segundos por consulta — IA vs. humano</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Escríbenos</span>
+        <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+      </div>
+      <div class="contact__inner">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Nombre completo</label>
+              <input type="text" id="contactName" name="name" placeholder="Tu nombre" autocomplete="name" />
+              <span class="form-error" id="errName"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Correo electrónico</label>
+              <input type="email" id="contactEmail" name="email" placeholder="correo@ejemplo.com" autocomplete="email" />
+              <span class="form-error" id="errEmail"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Asunto</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="¿En qué podemos ayudarte?" />
+            <span class="form-error" id="errSubject"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Mensaje</label>
+            <textarea id="contactMsg" name="message" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <span class="form-error" id="errMsg"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+          </button>
+        </form>
+        <div class="contact__info">
+          <div class="contact-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Dirección</strong>
+              <span>Av. Javier Prado 1234, San Isidro, Lima</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Teléfono</strong>
+              <span>+51 (01) 234-5678</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>ventas@innovventas.pe</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Horario</strong>
+              <span>Lun – Sáb: 9:00 AM – 7:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#inicio" class="header__logo">
+            <span class="logo__icon"><i class="fa-solid fa-bolt"></i></span>
+            <span class="logo__text">Innov<strong>Ventas</strong></span>
+          </a>
+          <p>Tu tienda de tecnología inteligente, potenciada por IA para brindarte la mejor experiencia de compra.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="#productos">Laptops</a></li>
+            <li><a href="#productos">Smartphones</a></li>
+            <li><a href="#productos">Audio</a></li>
+            <li><a href="#productos">Monitores</a></li>
+            <li><a href="#productos">Periféricos</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Política de devoluciones</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 InnovVentas. Todos los derechos reservados.</p>
+        <div class="footer__payments">
+          <i class="fa-brands fa-cc-visa" title="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
+          <i class="fa-solid fa-mobile-screen" title="Yape / Plin"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       CARRITO SIDEBAR
+  ═══════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar__header">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Mi carrito</h2>
+      <button class="cart-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-sidebar__body" id="cartBody">
+      <!-- Items generados por JS -->
+    </div>
+    <div class="cart-sidebar__footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">S/ 0.00</strong>
+      </div>
+      <button class="btn btn--primary btn--full" id="checkoutBtn">
+        <i class="fa-solid fa-credit-card"></i> Proceder al pago
+      </button>
+      <button class="btn btn--ghost btn--full" id="clearCartBtn">
+        Vaciar carrito
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       CHATBOT FLOTANTE
+       Preparado para conectar con Azure Bot Service
+       Ver instrucciones en js/app.js (sección CHATBOT)
+  ═══════════════════════════════════════════ -->
+  <div class="chatbot" id="chatbot">
+    <!-- Botón flotante -->
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Abrir asistente IA">
+      <i class="fa-solid fa-robot" id="chatbotIcon"></i>
+      <span class="chatbot__badge" id="chatbotBadge">1</span>
+    </button>
+
+    <!-- Ventana de chat -->
+    <div class="chatbot__window" id="chatbotWindow">
+      <div class="chatbot__header">
+        <div class="chatbot__avatar">
+          <i class="fa-solid fa-robot"></i>
+          <span class="chatbot__status"></span>
+        </div>
+        <div class="chatbot__info">
+          <strong>Asistente InnovVentas</strong>
+          <span>Con tecnología IA · En línea</span>
+        </div>
+        <button class="chatbot__close" id="chatbotClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Área de conversación -->
+      <div class="chatbot__messages" id="chatbotMessages">
+        <!-- Los mensajes se generan en JS -->
+      </div>
+
+      <!-- Input -->
+      <div class="chatbot__input-area">
+        <div class="chatbot__suggestions" id="chatbotSuggestions">
+          <button class="suggestion-chip">¿Qué laptops tienen?</button>
+          <button class="suggestion-chip">Métodos de pago</button>
+          <button class="suggestion-chip">¿Hacen envíos?</button>
+        </div>
+        <div class="chatbot__input-row">
+          <input
+            type="text"
+            id="chatbotInput"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+          />
+          <button class="chatbot__send" id="chatbotSend" aria-label="Enviar">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="chatbot__disclaimer">
+          <!-- INTEGRACIÓN AZURE: Cambiar este aviso cuando se conecte Bot Framework -->
+          Respuestas simuladas — pronto con Azure Bot Service
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
